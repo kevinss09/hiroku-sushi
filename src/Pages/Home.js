@@ -4,6 +4,7 @@ import headerSideImage from "../assets/images/HeaderSideImage.png";
 import aboutImg from "../assets/images/aboutImage.png";
 import { weeklySpecialJson, popularJson, partyJson } from "../JSON/sushi";
 import fullMenu from "../assets/images/FullMenu.png";
+import contactImage from "../assets/images/contactImage.png";
 
 export default function Home() {
 	return (
@@ -142,6 +143,41 @@ export default function Home() {
 					<div className="my-10">
 						<img src={fullMenu} alt="" className="w-full h-full object-cover" />
 					</div>
+				</div>
+			</div>
+			<div className="contact w-full bg-[#070707] py-5 flex flex-row">
+				<div className="w-1/2">
+					<img src={contactImage} alt="" className="w-5/6 h-full" />
+				</div>
+				<div className="w-1/2 py-20 flex flex-col text-white">
+					<h1 className="font-tropical text-[150px]">Contact Us</h1>
+					<div className="mt-10">
+						<h3 className="text-2xl font-bold tracking-wider">Address:</h3>
+						<p className=" mt-2 font-sans text-lg tracking-widest font-light">
+							1050 Hamilton St, Vancouver, BC V5R 5G4
+						</p>
+					</div>
+					<div className="mt-14">
+						<h3 className="text-2xl font-bold tracking-wider">Open Hours: </h3>
+						<p className=" mt-2 font-sans text-lg tracking-widest font-light leading-loose">
+							11:00 a.m. - 9:30 p.m. Monday - Wednesday <br />
+							11:00 a.m. - 11:00 p.m. Thursday - Sunday <br />
+							4:00 p.m. - 5:00 p.m. Break Time
+						</p>
+					</div>
+					<div className="mt-14">
+						<h3 className="text-2xl font-bold tracking-wider">Contact: </h3>
+						<p className=" mt-2 font-sans text-lg tracking-widest font-light leading-loose">
+							+1 (604) 344-9882
+						</p>
+					</div>
+				</div>
+			</div>
+			<div className="footer bg-[#0D0B0D] w-full">
+				<div className="text-center py-10">
+					<h1 className="text-white tracking-widest">
+						© Copyright 2023 Hiroku Sushi
+					</h1>
 				</div>
 			</div>
 		</div>
