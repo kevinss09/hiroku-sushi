@@ -1,34 +1,15 @@
 import React from "react";
-import headerImage from "../assets/images/HeaderImage.png";
-import headerSideImage from "../assets/images/HeaderSideImage.png";
 import aboutImg from "../assets/images/aboutImage.png";
 import { weeklySpecialJson, popularJson, partyJson } from "../JSON/sushi";
 import fullMenu from "../assets/images/FullMenu.png";
 import contactImage from "../assets/images/contactImage.png";
+import Header from "../Parts/Header";
+import Footer from "../Parts/Footer";
 
 export default function Home() {
 	return (
 		<div className="min-h-screen font-poppins max-w-screen">
-			<div className="h-screen max-w-screen relative">
-				<img src={headerImage} alt="" className="w-full h-full object-cover" />
-				<div className="absolute top-0 left-0 py-8 px-8 flex flex-row items-center ">
-					<h3 className="font-tropical text-white text-5xl mr-6">HIROKU</h3>
-					<h4 className="text-white mx-6 tracking-wider">Home</h4>
-					<h4 className="text-white mx-6 tracking-wider">Reservations</h4>
-				</div>
-				<div className="absolute left-[30%] top-[15%] text-white flex flex-col justify-center items-center">
-					<h1 className="font-tropical text-[200px]">Hiroku sushi</h1>
-					<h3 className="text-3xl tracking-wider font-light">
-						The #1 top rated sushi restaurant in Vancouver
-					</h3>
-					<button className="w-64 h-16 tracking-wider text-xl rounded-xl text-black bg-[#FFFFFFB8] hover:bg-white duration-300 mt-40">
-						Menu
-					</button>
-				</div>
-				<div className="absolute left-0 bottom-[-342px]">
-					<img src={headerSideImage} alt="" />
-				</div>
-			</div>
+			<Header />
 			<div className="bg-[#0D0B0D] w-full flex">
 				{/* Left empty part */}
 				<div className="w-[20%]"></div>
@@ -55,12 +36,12 @@ export default function Home() {
 			</div>
 			<div className="bg-[#070707] pt-20 px-20 text-white">
 				<h1 className="font-tropical text-[100px]">Weekly special</h1>
-				<div className="px-10 py-20">
-					<div className="w-full flex flex-row justify-between h-[550px]">
+				<div className="py-20">
+					<div className="w-full grid grid-cols-4 grid-rows-1 gap-14 h-[550px]">
 						{weeklySpecialJson.map((sushi, index) => {
 							return (
 								<div
-									className="flex flex-col items-center justify-between"
+									className="col-span-1 flex flex-col items-center justify-between"
 									key={index}
 								>
 									<img src={sushi.image} alt="" className={`Image ${index}`} />
@@ -76,7 +57,7 @@ export default function Home() {
 					</div>
 				</div>
 			</div>
-			<div className="bg-[#0D0B0D] p-20">
+			<div className="bg-[#0D0B0D] p-20" name="scroll">
 				<h1 className="font-tropical text-[100px] text-center text-white">
 					MENU
 				</h1>
@@ -173,13 +154,7 @@ export default function Home() {
 					</div>
 				</div>
 			</div>
-			<div className="footer bg-[#0D0B0D] w-full">
-				<div className="text-center py-10">
-					<h1 className="text-white tracking-widest">
-						© Copyright 2023 Hiroku Sushi
-					</h1>
-				</div>
-			</div>
+			<Footer />
 		</div>
 	);
 }
